@@ -1,27 +1,34 @@
-import React, { useContext, Component } from 'react';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+import { ThemeContext } from '../../ThemeContext';
 import { Container } from './styles';
-import { ThemeContext }  from '../../ThemeContext'
 
-export default class Header extends Component{
-
+class Header extends Component {
   static contextType = ThemeContext;
-  
+
+  handleNavigate = () => {
+    this.props.history.push('/posts');
+  }
+
   render() {
     const { handleToggleTheme, theme } = this.context;
 
     return (
       <Container>
         <h1>JStack's Blog</h1>
-        <button 
-          type="button" 
-          onClick={handleToggleTheme} 
+        <button
+          type="button"
+          onClick={handleToggleTheme}
         >
           {theme === 'dark' ? '🌞' : '🌚'}
         </button>
+        <button onClick={this.handleNavigate} style={{ color: '#fff' }}> Navegar </button>
       </Container>
     );
   }
 }
+
+export default withRouter(Header);
 
 // export default function Header() {
 
