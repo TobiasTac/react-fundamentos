@@ -22,7 +22,7 @@ class Header extends Component {
         >
           {theme === 'dark' ? '🌞' : '🌚'}
         </button>
-        <button onClick={this.handleNavigate} style={{ color: '#fff' }}> Navegar </button>
+        <button onClick={this.handleNavigate} style={{ color: theme === 'dark' ? '#fff' : '#000' }} > Navegar </button>
       </Container>
     );
   }

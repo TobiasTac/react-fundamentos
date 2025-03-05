@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background: #000;
+  background: ${({ theme }) => theme.headerBackgroundColor};
   margin-top: 16px;
   padding: 16px;
   border-radius: 4px;
-  
+
   a {
-    color: #fff;
+    color: ${({ theme }) => theme.textColor};
     text-decoration: none;
     display: inline-block;
     transition: 0.5s;
@@ -20,5 +20,18 @@ export const Nav = styled.nav`
   a:hover{
     color: #bff;
   }
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`;
+
+export const Content = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
 `;

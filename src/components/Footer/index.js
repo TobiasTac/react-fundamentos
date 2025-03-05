@@ -23,7 +23,7 @@ export default function Footer() {
       >
         {theme === 'dark' ? '🌞' : '🌚'}
       </button>
-      <button onClick={handleNavigate} style={{ color: '#fff' }} > Navegar </button>
+      <button onClick={handleNavigate} style={{ color: theme === 'dark' ? '#fff' : '#000' }} > Navegar </button>
     </Container>
   );
 }

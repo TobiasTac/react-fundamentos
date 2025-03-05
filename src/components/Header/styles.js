@@ -13,7 +13,6 @@ export const Container = styled.header`
   button {
     font-size: ${commonStyles.spacing.medium}px;
     cursor: pointer;
-    cursor: pointer;
     background: transparent;
     border: none;
   }
